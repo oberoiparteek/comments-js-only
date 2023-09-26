@@ -1,0 +1,111 @@
+
+
+.container{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 80%;
+    margin: auto;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.mt-3{
+    margin-top: 3em;
+}
+
+#comments-container{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #efefef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.comments-section{
+    padding: 30px;
+    overflow-y: scroll;
+}
+
+.comment-input-container{
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 10px;
+        
+}
+.comment-input-container input{
+    width: 40%;
+    padding: 10px;
+    border: 1px solid rgb(217, 207, 207);
+    border-radius: 10px;
+}
+
+.comment-input-container button{
+    padding: 0 30px;
+    background-color: white;
+    border: 1px solid rgb(217, 207, 207);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(225, 119, 43);    
+}
+
+.comment-input-container button:hover{
+    transition: 0.4s;
+    border: 1px solid rgb(225, 119, 43);
+    background-color: rgb(225, 119, 43);
+    color: wheat;
+}
+
+.comment-container{
+    display: flex;
+    flex-direction: column;
+}
+.comment{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 10px;
+    padding: 3px;
+}
+.comment .profile{
+    max-width: 30px;
+}
+
+.comment button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border: 1px solid white;
+    align-self: flex-end;
+    margin-left: auto;
+    opacity: 0.5;
+}
+.comment button:hover{
+    border: 1px solid #a3a2a2;
+}
+
+
+.comment .reply-ic{
+    max-width: 20px;
+}
+
+.comment-container .reply{
+    margin-left: 30px;
+}
+.hidden{
+    display: none !important;
+}
+
+.local-reply-action-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+.local-reply-action-div input{
+    min-width: 70%;
+}

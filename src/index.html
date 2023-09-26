@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments component</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container mt-3 " id="comments-container">
+        <div class="comments-section">
+            <div class="comment">
+                <img class="profile" src="https://dinopixel.com/preload/1122/My-profile-pic-32-by-32.png" alt="img">
+                <span> A simple comment</span>
+            </div>
+        </div>
+        <div class="comment-input-container" id="global-input-container">
+            <input type="text" name="comment" id="global-comment-input">
+            <button type="button">Post</button>
+        </div>
+    </div>
+    <template id="comment-template">
+        <div class="comment-container">
+            <div class="comment">
+                <img class="profile" src="./profile-pic-32-by-32.png" alt="img">
+                <span></span>
+
+                <button class="bt-reply-show"><img class="reply-ic"
+                        src="data:image/png;base64,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"
+                        alt="reply" srcset=""></button>
+                
+            </div>
+            <div class="local-reply-action-div hidden">
+                <input type="text" name="reply" id="local-reply-input">
+                <button class="bt-reply">Post</button>
+            </div>
+        </div>
+    </template>
+    <template id="reply">
+        <div class="reply"></div>
+    </template>
+
+    <script src="./classes/Comment.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
