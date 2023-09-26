@@ -17,9 +17,12 @@
                 <span> A simple comment</span>
             </div>
         </div>
-        <div class="comment-input-container" id="global-input-container">
-            <input type="text" name="comment" id="global-comment-input">
-            <button type="button">Post</button>
+        <div  id="global-input-container">
+            <form class="comment-input-container" id="global-comment-form">
+                <input type="text" name="globalinput" id="global-comment-input">
+                <button type="button">Post</button>
+            </form>
+            
         </div>
     </div>
     <template id="comment-template">
@@ -33,16 +36,19 @@
                         alt="reply" srcset=""></button>
                 
             </div>
-            <div class="local-reply-action-div hidden">
-                <input type="text" name="reply" id="local-reply-input">
-                <button class="bt-reply">Post</button>
+            <div class="replies-wrapper">
+
             </div>
+            <form class="local-reply-action-div hidden">
+                <input type="text" name="reply">
+                <button class="bt-reply">Post</button>
+            </form>
         </div>
     </template>
     <template id="reply">
         <div class="reply"></div>
     </template>
-
+    <script src="./classes/constants.js"></script>
     <script src="./classes/Comment.js"></script>
     <script src="index.js"></script>
 </body>

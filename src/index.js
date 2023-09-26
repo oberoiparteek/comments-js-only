@@ -43,10 +43,10 @@ const reRender = () => {
 }
 reRender()
 
-const globalInputWrapper = document.getElementById('global-input-container')
-const inputReply=globalInputWrapper.querySelector('input')
-const btReply=globalInputWrapper.querySelector('button')
-btReply.addEventListener('click',(e)=>{
+const globalCommentForm = document.getElementById('global-comment-form')
+globalCommentForm.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    const inputReply = e.target.globalinput
     if(inputReply.value){
         comments.push(new Comment(comments.length+1,inputReply.value,[]))
         inputReply.value = ''
@@ -54,3 +54,13 @@ btReply.addEventListener('click',(e)=>{
         reRender()
     }
 })
+// const inputReply=globalInputWrapper.querySelector('input')
+// const btReply=globalInputWrapper.querySelector('button')
+// btReply.addEventListener('click',(e)=>{
+//     if(inputReply.value){
+//         comments.push(new Comment(comments.length+1,inputReply.value,[]))
+//         inputReply.value = ''
+//         inputReply.focus()
+//         reRender()
+//     }
+// })
